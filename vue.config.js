@@ -19,5 +19,15 @@ module.exports = {
         // 并且如果找不到的话，就回退到 `public/index.html`。
         // 输出文件名会被推导为 `subpage.html`。
         // subpage: 'src/subpage/main.js'
-    }
+    },
+    // pluginOptions: {
+    //     'style-resources-loader': {
+    //         preProcessor: 'less',
+    //         patterns: [
+    //             // 下面这段是自己加的，根据自己文件的位置来修改
+    //             path.resolve(__dirname, "src/assets/css/global.less")
+    //         ]
+    //     }
+    // }
 }
+
