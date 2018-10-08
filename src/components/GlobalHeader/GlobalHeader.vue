@@ -14,5 +14,8 @@
 </script>
 
 <style scoped>
-
+    .global_header_new {
+        line-height: 30px;
+        width: 100%;
+    }
 </style>
