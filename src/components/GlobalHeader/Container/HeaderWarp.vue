@@ -10,6 +10,7 @@
                 <glob-search></glob-search>
                 <glob-car></glob-car>
             </div>
+            <global-nav></global-nav>
         </section>
     </div>
 </template>
@@ -21,14 +22,16 @@
     import GlobCity from "./Content/GlobCity";
     import GlobSearch from "./Content/GlobSearch";
     import GlobCar from "./Content/GlobCar";
+    import GlobalNav from "./GlobalNav";
     export default {
         name: "HeaderWarp",
-        components: {GlobCar, GlobSearch, GlobCity, GlobLogo, HeaderContent, TopBar}
+        components: {GlobalNav, GlobCar, GlobSearch, GlobCity, GlobLogo, HeaderContent, TopBar}
     }
 </script>
 
 <style scoped lang="less">
     .header_warp {
+        display: none;
         .top_bar {
             height: 30px;
             line-height: 30px;
