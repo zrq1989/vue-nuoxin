@@ -1,14 +1,18 @@
 <template>
     <div class="wrap main_width">
         <homelist-slider></homelist-slider>
+        <list-newp></list-newp>
+        <home-link-warp></home-link-warp>
     </div>
 </template>
 
 <script>
     import HomelistSlider from "./HomelistSlider";
+    import ListNewp from "./ListNewp";
+    import HomeLinkWarp from "./HomeLinkWarp";
     export default {
         name: "HomeWarp",
-        components: {HomelistSlider}
+        components: {HomeLinkWarp, ListNewp, HomelistSlider}
     }
 </script>
 

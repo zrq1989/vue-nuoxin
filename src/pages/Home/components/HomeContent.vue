@@ -1,7 +1,6 @@
 <template>
  <div class="main">
      <section class="banner"> <baner-lunbo></baner-lunbo></section>
-
      <home-list></home-list>
  </div>
 </template>
