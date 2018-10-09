@@ -20,6 +20,26 @@ module.exports = {
         // 输出文件名会被推导为 `subpage.html`。
         // subpage: 'src/subpage/main.js'
     },
+    baseUrl: process.env.NODE_ENV === 'production' ? '/online/' : '/',
+    lintOnSave: true,
+    productionSourceMap: false,
+    devServer: {
+        port: 8080,
+        host: 'localhost',
+        https: false,
+        open: true,
+
+        proxy: {
+            '/api': {
+                target: 'http://localhost:8080/',
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/api': '/'
+                }
+            }
+
+        },
+    }
     // pluginOptions: {
     //     'style-resources-loader': {
     //         preProcessor: 'less',

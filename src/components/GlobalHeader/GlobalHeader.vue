@@ -11,7 +11,14 @@
     import GlobWarp from "./GlobWarp/GlobWarp";
     export default {
         name: "GlobalHeader",
-        components: {GlobWarp, HeaderWarp}
+        components: {GlobWarp, HeaderWarp},
+        data () {
+            return {
+
+            }
+
+        },
+
     }
 </script>
 
@@ -19,5 +26,6 @@
     .global_header_new {
         line-height: 30px;
         width: 100%;
+        position: relative;
     }
 </style>

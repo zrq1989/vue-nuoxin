@@ -1,12 +1,12 @@
 <template>
-    <div class="nav_cart_wrap f_right">
+    <div class="nav_cart_wrap f_right" @mouseenter="listShow" @mouseleave="listHide">
         <a href="#" class="nav_cart">
             <strong class="global_cart_num hide">
                 <b>0</b>
             </strong>
         </a>
         <span class="s"></span>
-        <div class="global_top_cart">
+        <div class="global_top_cart" :style="{ display: togg }">
             <div class="no_content">
                  购物车中还没有商品，赶紧选购吧
             </div>
@@ -16,7 +16,20 @@
 
 <script>
     export default {
-        name: "GlobalVavCart"
+        name: "GlobalVavCart",
+        data () {
+            return {
+                togg: "none"
+            }
+        },
+        methods: {
+            listShow () {
+                this.togg = "block"
+            },
+            listHide () {
+                this.togg = "none"
+            }
+        }
     }
 </script>
 
@@ -78,7 +91,6 @@
         z-index: 2;
     }
     .s {
-        display: none;
         position: absolute;
         width: 16px;
         height: 20px;
@@ -87,7 +99,6 @@
         margin-left: -8px;
     }
     .global_top_cart {
-        display: none;
         position: absolute;
         top: 47px;
         width: 300px;

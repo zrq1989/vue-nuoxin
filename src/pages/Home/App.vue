@@ -1,21 +1,22 @@
 <template>
   <div id="app" class="container main_home max_width">
    <global-header></global-header>
+      <home-content></home-content>
       <global-footer></global-footer>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/NavHeader.vue'
 import GlobalHeader from "../../components/GlobalHeader/GlobalHeader";
 import GlobalFooter from "../../components/GlobalFooter/GlobalFooter";
+import HomeContent from "./components/HomeContent";
 
 export default {
   name: 'app',
   components: {
+      HomeContent,
       GlobalFooter,
       GlobalHeader,
-    HelloWorld
   }
 }
 </script>

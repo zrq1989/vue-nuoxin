@@ -1,5 +1,5 @@
 {
-  "name": "vue-ainuo",
+  "name": "vue-froms",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,15 +9,16 @@
   },
   "dependencies": {
     "element-ui": "^2.4.8",
+    "swiper": "^4.4.1",
     "vue": "^2.5.17"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.4",
     "@vue/cli-plugin-eslint": "^3.0.4",
     "@vue/cli-service": "^3.0.4",
+    "axios": "^0.18.0",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
-    "style-resources-loader": "^1.2.1",
     "vue-template-compiler": "^2.5.17"
   },
   "eslintConfig": {
@@ -43,11 +44,5 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ],
-  "devDependencies": {
-    "less": "^3.8.1",
-    "less-loader": "^4.1.0"
-  }
+  ]
 }
-
-

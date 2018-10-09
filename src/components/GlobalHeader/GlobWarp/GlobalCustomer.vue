@@ -1,7 +1,7 @@
 <template>
-    <div class="customer_link_wrap">
+    <div class="customer_link_wrap" @mouseenter="listShow" @mouseleave="listHide">
         <span class="s"></span>
-        <div class="global_top_customer">
+        <div class="global_top_customer" :style="{display: togg}">
             <a href="#">登录</a>
             <a href="#">注册</a>
         </div>
@@ -10,7 +10,20 @@
 
 <script>
     export default {
-        name: "GlobalCustomer"
+        name: "GlobalCustomer",
+        data () {
+            return {
+                togg: "none"
+            }
+        },
+        methods: {
+            listShow () {
+                this.togg = "block"
+            },
+            listHide () {
+                this.togg = "none"
+            }
+        }
     }
 </script>
 
@@ -49,7 +62,6 @@
         margin-left: -8px;
     }
     .global_top_customer {
-        display: block;
         position: absolute;
         top: 47px;
         left: 50%;

@@ -1,9 +1,11 @@
 <template>
     <nav class="global_nav">
-        <ul class="nav clear_fix" @click="showList" @mouseover="listShow" @mouseout="listHide">
+        <ul class="nav clear_fix" @click="showList">
             <li :class="listindex == item.id?'active':''" v-for="(item, index) of lists"
                 :key="item.id"
                 :indexs="index"
+                @mouseenter="listShow"
+                @mouseleave="listHide"
             >
                 <a href="javascript:;"  :data-index="item.id">{{ item.title }}</a>
                 <div class="inner_wrap" v-if="item.id == disp"><a href="#" v-for="im of item.cons">{{ im.con }}</a></div>
@@ -87,13 +89,12 @@
 
             },
             listShow (e) {
-                if (e.target.nodeName == "LI") {
                     const index = e.target.getAttribute("indexs");
                     const le = this.lists[index].cons
                     if (le) {
                         this.disp = index
                     }
-                }
+
             },
             listHide(e) {
                 this.disp = ""
@@ -122,7 +123,7 @@
                 font-size: 16px;
                 position: relative;
                 text-align: center;
-                height: 20px;
+                height: 60px;
                 line-height: 20px;
                 float: left;
             }
@@ -142,7 +143,7 @@
                 margin-top: -6px;
             }
             li.active::after {
-                bottom: -20px;
+                bottom: -40px;
             }
             li.active::after {
                 content: '';
@@ -151,7 +152,7 @@
                 height: 2px;
                 background: #f5bdc0;
                 left: 0;
-                bottom: -20px;
+                bottom: 20px;
             }
             .inner_wrap {
                 padding: 10px 0;

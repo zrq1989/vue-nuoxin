@@ -31,7 +31,7 @@
 
 <style scoped lang="less">
     .header_warp {
-        display: none;
+        display: block;
         .top_bar {
             height: 30px;
             line-height: 30px;
