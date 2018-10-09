@@ -1,7 +1,10 @@
 <template>
     <ul class="p_list_new clear_fix ">
-        <li class="p_item_new" v-for="(item, index) of imgLists"
+        <li :class="{'p_item_new': 'p_item_new','active': item.id == active}" v-for="(item, index) of imgLists"
             :key="item.id"
+            @mouseenter="addList"
+            @mouseleave="remList"
+            :data-index="item.id"
         >
             <a href="#">
                 <home-img-warp :imgurl="item.imgUrl"></home-img-warp>
@@ -30,69 +33,88 @@
                 imgLists: [
                     {
                         id: "0",
-                        imgUrl: require('./../../../../assets/img/list_10800.jpg'),
+                        imgUrl: require('../../../../../assets/img/list_10800.jpg'),
                         title : "雪域牛乳芝士蛋糕",
                         price: "198",
                         bunbtn: "加入购物车",
-                        ptag: "人气爆款"
+                        ptag: "人气爆款",
+                        active: "acti"
                     },
                     {
                         id: "1",
-                        imgUrl: require('./../../../../assets/img/list_16196.jpg'),
+                        imgUrl: require('../../../../../assets/img/list_16196.jpg'),
                         title : "数字蛋糕",
                         price: "198",
                         bunbtn: "加入购物车",
-                        ptag: "NEW"
+                        ptag: "NEW",
+                        active: "0"
                     },
                     {
                         id: "2",
-                        imgUrl: require('./../../../../assets/img/list_15474.jpg'),
+                        imgUrl: require('../../../../../assets/img/list_15474.jpg'),
                         title : "美刀刀蛋糕",
                         price: "298",
                         bunbtn: "加入购物车",
-                        ptag: "人气爆款"
+                        ptag: "人气爆款",
+                        active: "acti"
                     },
                     {
                         id: "3",
-                        imgUrl: require('./../../../../assets/img/list_12287.jpg'),
+                        imgUrl: require('../../../../../assets/img/list_12287.jpg'),
                         title : "环游世界·秋冬季蛋糕",
                         price: "218",
                         bunbtn: "加入购物车",
-                        ptag: "人气爆款"
+                        ptag: "人气爆款",
+                        active: "acti"
                     },
                     {
                         id: "4",
-                        imgUrl: require('./../../../../assets/img/list_18475.jpg'),
+                        imgUrl: require('../../../../../assets/img/list_18475.jpg'),
                         title : "小甜点蛋糕",
                         price: "198",
                         bunbtn: "加入购物车",
-                        ptag: "HOT"
+                        ptag: "HOT",
+                        active: "acti"
                     },
                     {
                         id: "5",
-                        imgUrl: require('./../../../../assets/img/list_18465_o.jpg'),
+                        imgUrl: require('../../../../../assets/img/list_18465_o.jpg'),
                         title : "栗子千层蛋糕",
                         price: "218",
                         bunbtn: "加入购物车",
-                        ptag: "人气爆款"
+                        ptag: "人气爆款",
+                        active: "acti"
                     },
                     {
                         id: "6",
-                        imgUrl: require('./../../../../assets/img/list_12775.jpg'),
+                        imgUrl: require('../../../../../assets/img/list_12775.jpg'),
                         title : "提拉米苏蛋糕",
                         price: "198",
                         bunbtn: "加入购物车",
-                        ptag: "人气爆款"
+                        ptag: "人气爆款",
+                        active: "acti"
                     },
                     {
                         id: "7",
-                        imgUrl: require('./../../../../assets/img/list_12943.jpg'),
+                        imgUrl: require('../../../../../assets/img/list_12943.jpg'),
                         title : "诺心花园·秋月蛋糕",
                         price: "218",
                         bunbtn: "加入购物车",
-                        ptag: "人气爆款"
+                        ptag: "人气爆款",
+                        active: "acti"
                     }
-                ]
+                ],
+                active: "acti",
+                p_item_new: "p_item_new"
+            }
+        },
+        methods: {
+            addList (e) {
+                const indexs = e.target.getAttribute("data-index");
+                this.active = indexs;
+            },
+            remList () {
+                this.active = "acti"
             }
         }
     }
@@ -119,6 +141,23 @@
         -webkit-transition: all 1s ease;
         -o-transition: all 1s ease;
         -ms-transition: all 1s ease;
+    }
+    .p_item_new.active {
+
+        background: #FCEDEF;
+    }
+    .p_item_new>>>img {
+        transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -webkit-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+    }
+    .p_item_new.active>>>.buy_btn::before {
+        background-position:-50px -290px;
+    }
+    .p_item_new.active>>>img {
+        transform: scale(1.05);
     }
     .p_info {
         font-size: 14px;

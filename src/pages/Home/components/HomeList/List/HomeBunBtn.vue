@@ -34,7 +34,7 @@
         position: absolute;
         width: 20px;
         height: 20px;
-        background: url("../../../../assets/img/icons.png") center no-repeat;
+        background: url("../../../../../assets/img/icons.png") center no-repeat;
         background-size: 400px 400px;
         top: 50%;
         margin-top: -10px;

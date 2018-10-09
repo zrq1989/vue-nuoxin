@@ -1,6 +1,5 @@
 <template>
     <div class="wrap main_width">
-        <homelist-slider></homelist-slider>
         <list-newp></list-newp>
         <home-link-warp></home-link-warp>
     </div>

@@ -34,6 +34,7 @@
         -o-transform: translateZ(0);
         -moz-transform: translateZ(0);
         -ms-transform: translateZ(0);
+        overflow: hidden;
     }
     .div_img img {
 

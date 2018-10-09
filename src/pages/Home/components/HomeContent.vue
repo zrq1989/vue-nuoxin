@@ -2,15 +2,19 @@
  <div class="main">
      <section class="banner"> <baner-lunbo></baner-lunbo></section>
      <home-list></home-list>
+     <home-imges></home-imges>
+     <home-lists></home-lists>
  </div>
 </template>
 
 <script>
 import BanerLunbo from "./Banner/BanerLunbo";
 import HomeList from "./HomeList/HomeList";
+import HomeImges from "./HomeImg/HomeImges";
+import HomeLists from "./HomeLists/HomeLists";
 export default {
   name: 'HomeContent',
-    components: {HomeList, BanerLunbo},
+    components: {HomeLists, HomeImges, HomeList, BanerLunbo},
 }
 </script>
 
