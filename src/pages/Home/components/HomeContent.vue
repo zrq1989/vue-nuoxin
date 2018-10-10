@@ -4,6 +4,7 @@
      <home-list></home-list>
      <home-imges></home-imges>
      <home-lists></home-lists>
+     <home-coment></home-coment>
  </div>
 </template>
 
@@ -12,9 +13,10 @@ import BanerLunbo from "./Banner/BanerLunbo";
 import HomeList from "./HomeList/HomeList";
 import HomeImges from "./HomeImg/HomeImges";
 import HomeLists from "./HomeLists/HomeLists";
+import HomeComent from "./HomeComent/HomeComent";
 export default {
   name: 'HomeContent',
-    components: {HomeLists, HomeImges, HomeList, BanerLunbo},
+    components: {HomeComent, HomeLists, HomeImges, HomeList, BanerLunbo},
 }
 </script>
 
