@@ -3,6 +3,8 @@
    <global-header></global-header>
       <home-content></home-content>
       <global-footer></global-footer>
+      <global-add-cart></global-add-cart>
+      <global-cover></global-cover>
   </div>
 </template>
 
@@ -10,10 +12,14 @@
 import GlobalHeader from "../../components/GlobalHeader/GlobalHeader";
 import GlobalFooter from "../../components/GlobalFooter/GlobalFooter";
 import HomeContent from "./components/HomeContent";
+import GlobalAddCart from "../../components/GlobalAddCart/GlobalAddCart";
+import GlobalCover from "../../components/GlobalCover/GlobalCover";
 
 export default {
   name: 'app',
   components: {
+      GlobalCover,
+      GlobalAddCart,
       HomeContent,
       GlobalFooter,
       GlobalHeader,
