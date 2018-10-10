@@ -1,6 +1,6 @@
 <template>
     <article id="buy_pop" class="buy_pop">
-        <addcart-header></addcart-header>
+        <addcart-header @offcart="offCart"></addcart-header>
         <div class="main">
             <addcart-main></addcart-main>
             <div class="detail">
@@ -18,9 +18,33 @@
     import AddcartDatail from "./AddcartMain/AddcartDatail";
     import AddcartBottom from "./AddcartMain/AddcartBottom";
     import AddcartFooter from "./AddcartFooter";
+
     export default {
         name: "GlobalAddCart",
-        components: {AddcartFooter, AddcartBottom, AddcartDatail, AddcartMain, AddcartHeader}
+        components: {AddcartFooter, AddcartBottom, AddcartDatail, AddcartMain, AddcartHeader},
+        data () {
+            return {
+                of: "",
+                carData: [],
+                nums: [],
+                indexs: ""
+            }
+        },
+        methods: {
+            offCart (e) {
+                this.of = e;
+                this.$emit("cartoff",this.of);
+            }
+        },
+        mounted () {
+
+        },
+        computed: {
+
+        },
+        watch: {
+
+        }
     }
 </script>
 

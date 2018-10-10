@@ -1,20 +1,36 @@
 <template>
-    <a href="#" class="buy_btn ">
-        <span>{{ bunbtns }}&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <a href="javascript:;" class="buy_btn ">
+        <span @click="oncart">{{ bunbtns }}&nbsp;&nbsp;&nbsp;&nbsp;</span>
     </a>
 </template>
 
 <script>
+    import { mapActions,mapMutations,mapState } from 'vuex'
     export default {
         name: "HomeBunBtn",
-        props: ["bunbtn"],
+        props: ["bunbtn","indexs"],
         data () {
             return {
-                bunbtns: ""
+                bunbtns: "",
+                carDatas: [],
+                index: ""
             }
         },
+        computed: {
+            ...mapState(['carData'])
+        },
         mounted () {
-            this.bunbtns = this.bunbtn
+            this.bunbtns = this.bunbtn;
+            this.index = this.indexs
+        },
+        methods: {
+            oncart () {
+                this.$emit("oncarts","1");
+                this.$http.get("./carJson/carJson.json").then(res=>{
+                    return this.$store.dispatch("addData",res.data)
+                }).catch(res=>console.log(res))
+               this.$store.dispatch("addIndex",this.index)
+            }
         }
     }
 </script>

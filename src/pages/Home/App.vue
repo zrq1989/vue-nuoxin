@@ -1,10 +1,18 @@
 <template>
   <div id="app" class="container main_home max_width">
    <global-header></global-header>
-      <home-content></home-content>
+      <home-content
+        @oncart="onCart"
+      ></home-content>
       <global-footer></global-footer>
-      <global-add-cart></global-add-cart>
-      <global-cover></global-cover>
+      <global-add-cart
+        @cartoff="cartOff"
+        v-if="ons=='1'?true:false"
+        :cardatas="carData"
+      ></global-add-cart>
+      <global-cover
+              v-if="ons=='1'?true:false"
+      ></global-cover>
   </div>
 </template>
 
@@ -23,7 +31,28 @@ export default {
       HomeContent,
       GlobalFooter,
       GlobalHeader,
-  }
+  },
+    data () {
+      return {
+          of: "1",
+          GlobalAddCart:"",
+          ons: "0",
+          carData:[]
+      }
+    },
+    methods: {
+        cartOff (ev) {
+            this.ons = ev
+        },
+        onCart (e, cardata) {
+            this.ons = e;
+        }
+    },
+    watch: {
+      of: function () {
+        console.log(this.of)
+      }
+    }
 }
 </script>
 

@@ -1,7 +1,9 @@
 <template>
     <div class="wrap main_width">
         <homelist-slider></homelist-slider>
-        <list-newp></list-newp>
+        <list-newp
+            @cartons="oncart"
+        ></list-newp>
         <home-link-warp></home-link-warp>
     </div>
 </template>
@@ -12,7 +14,27 @@
     import HomeLinkWarp from "./HomeLinkWarp";
     export default {
         name: "HomeWarp",
-        components: {HomeLinkWarp, ListNewp, HomelistSlider}
+        components: {HomeLinkWarp, ListNewp, HomelistSlider},
+        data (){
+                return{
+                    ons: "",
+                    carData: []
+                }
+
+        },
+        methods: {
+            oncart (e, cardata) {
+                this.ons = e;
+                this.carData = cardata
+                this.$emit("onCart",this.ons,cardata);
+            }
+        },
+        watch: {
+            ons: function () {
+
+                // this.ons = ""
+            }
+        }
     }
 </script>
 

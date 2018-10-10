@@ -8,8 +8,33 @@
 </template>
 
 <script>
+    import { mapState } from 'vuex'
     export default {
-        name: "AddcartMain"
+        name: "AddcartMain",
+        data () {
+            return {
+                num: [],
+                indes: "",
+                list: [],
+                cart: []
+            }
+        },
+        created() {
+            // const index = this.$store.state.index;
+            // this.cart = this.$store.state.carData;
+            // if (this.cart) {
+            //     // this.list = this.cart[index].nums;
+            //     console.log(this.$store.state.carData)
+            // }
+            this.chan
+        },
+        computed: {
+            ...mapState(['carData']),
+            chan: function () {
+                this.cart = this.$store.state.carData;
+                console.log(this.$store.state.carData)
+            }
+        }
     }
 </script>
 

@@ -1,6 +1,6 @@
 <template>
     <section class="cake_section main_width">
-        <home-warp></home-warp>
+        <home-warp @onCart="oncart"></home-warp>
     </section>
 </template>
 
@@ -8,7 +8,26 @@
     import HomeWarp from "./HomeWarp";
     export default {
         name: "HomeList",
-        components: {HomeWarp}
+        components: {HomeWarp},
+        data () {
+            return {
+                ons: "",
+                carData: []
+            }
+        },
+        methods: {
+            oncart (e, cardata) {
+                this.ons = e;
+                this.carData = cardata;
+                this.$emit("cartons",this.ons,cardata);
+            }
+        },
+        watch: {
+            ons: function () {
+
+                // this.ons = ""
+            }
+        }
     }
 </script>
 

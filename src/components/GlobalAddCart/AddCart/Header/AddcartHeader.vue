@@ -1,13 +1,18 @@
 <template>
     <header>
         <h3>建议食用人数</h3>
-        <a href="javascript:;" class="close_btn">关闭</a>
+        <a @click="offCart" href="javascript:;" class="close_btn">关闭</a>
     </header>
 </template>
 
 <script>
     export default {
-        name: "AddcartHeader"
+        name: "AddcartHeader",
+        methods: {
+            offCart () {
+                this.$emit("offcart","0")
+            }
+        }
     }
 </script>
 

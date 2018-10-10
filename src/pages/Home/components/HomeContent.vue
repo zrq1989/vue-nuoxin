@@ -1,7 +1,9 @@
 <template>
  <div class="main">
      <section class="banner"> <baner-lunbo></baner-lunbo></section>
-     <home-list></home-list>
+     <home-list
+        @cartons="onCart"
+     ></home-list>
      <home-imges></home-imges>
      <home-lists></home-lists>
      <home-coment></home-coment>
@@ -17,6 +19,25 @@ import HomeComent from "./HomeComent/HomeComent";
 export default {
   name: 'HomeContent',
     components: {HomeComent, HomeLists, HomeImges, HomeList, BanerLunbo},
+    data () {
+      return {
+          ons: "",
+          carData: []
+      }
+    },
+    methods: {
+        onCart (e, cardata) {
+            this.ons = e ;
+            this.carData = cardata;
+            this.$emit("oncart", this.ons,cardata);
+        }
+    },
+    watch: {
+      ons: function () {
+
+          // this.ons = ""
+      }
+    }
 }
 </script>
 
