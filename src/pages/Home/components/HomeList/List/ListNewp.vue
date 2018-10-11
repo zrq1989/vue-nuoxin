@@ -14,7 +14,6 @@
                 <home-ptag :ptag="item.ptag"></home-ptag>
                 <home-price :price="item.price"></home-price>
                 <home-bun-btn :bunbtn="item.bunbtn"
-                              @oncarts="oncarts"
                               :indexs="item.id"
                 ></home-bun-btn>
             </div>
@@ -109,7 +108,6 @@
                 ],
                 active: "acti",
                 p_item_new: "p_item_new",
-                ons: "",
                 carData: []
             }
         },
@@ -121,16 +119,9 @@
             remList () {
                 this.active = "acti"
             },
-            oncarts (e) {
-                this.ons = e;
-                this.$emit("cartons", this.ons);
-            }
+
         },
         watch: {
-            ons: function () {
-
-                // this.ons = ""
-            }
         }
     }
 </script>

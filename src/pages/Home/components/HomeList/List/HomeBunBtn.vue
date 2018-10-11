@@ -25,12 +25,16 @@
         },
         methods: {
             oncart () {
-                this.$emit("oncarts","1");
+
                 this.$http.get("./carJson/carJson.json").then(res=>{
                     return this.$store.dispatch("addData",res.data)
                 }).catch(res=>console.log(res))
-               this.$store.dispatch("addIndex",this.index)
+                let obj = {}
+                obj.index = this.index
+                obj.n = "1"
+               this.$store.dispatch("addIndex",obj)
             }
+
         }
     }
 </script>

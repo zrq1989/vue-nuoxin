@@ -2,12 +2,10 @@
   <div id="app" class="container main_home max_width">
    <global-header></global-header>
       <home-content
-        @oncart="onCart"
       ></home-content>
       <global-footer></global-footer>
       <global-add-cart
-        @cartoff="cartOff"
-        v-if="ons=='1'?true:false"
+        v-if="changeOns=='1'?true:false"
         :cardatas="carData"
       ></global-add-cart>
       <global-cover
@@ -41,16 +39,19 @@ export default {
       }
     },
     methods: {
-        cartOff (ev) {
-            this.ons = ev
-        },
-        onCart (e, cardata) {
-            this.ons = e;
-        }
+
+
     },
     watch: {
       of: function () {
-        console.log(this.of)
+
+      }
+    },
+    computed: {
+
+      changeOns () {console.log(this.$store.state)
+          return this.ons = this.$store.state.nn;
+
       }
     }
 }

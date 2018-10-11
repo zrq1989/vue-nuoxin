@@ -8,9 +8,11 @@
 </template>
 
 <script>
-    import { mapState } from 'vuex'
+    import { mapState, mapGetters} from 'vuex'
+    import store from './../../../store/store'
     export default {
         name: "AddcartMain",
+        store,
         data () {
             return {
                 num: [],
@@ -19,21 +21,28 @@
                 cart: []
             }
         },
-        created() {
+        mounted() {
             // const index = this.$store.state.index;
             // this.cart = this.$store.state.carData;
             // if (this.cart) {
             //     // this.list = this.cart[index].nums;
             //     console.log(this.$store.state.carData)
             // }
-            this.chan
+            console.log(this.$store.state.carData)
+
         },
         computed: {
             ...mapState(['carData']),
-            chan: function () {
-                this.cart = this.$store.state.carData;
+            ...mapGetters(['getCart']),
+            f: function () {
                 console.log(this.$store.state.carData)
             }
+        },
+        watch: {
+            "this.$store": function () {
+                this.f
+            },
+            deep: true
         }
     }
 </script>

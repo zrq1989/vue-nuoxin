@@ -10,8 +10,10 @@
         name: "AddcartHeader",
         methods: {
             offCart () {
-                this.$emit("offcart","0")
+                this.$store.dispatch("addOfs", "0")
             }
+        },
+        computed: {
         }
     }
 </script>

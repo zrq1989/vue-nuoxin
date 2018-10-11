@@ -1,6 +1,6 @@
 <template>
     <article id="buy_pop" class="buy_pop">
-        <addcart-header @offcart="offCart"></addcart-header>
+        <addcart-header></addcart-header>
         <div class="main">
             <addcart-main></addcart-main>
             <div class="detail">
@@ -33,7 +33,6 @@
         methods: {
             offCart (e) {
                 this.of = e;
-                this.$emit("cartoff",this.of);
             }
         },
         mounted () {

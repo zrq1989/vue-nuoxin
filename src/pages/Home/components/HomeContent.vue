@@ -1,9 +1,7 @@
 <template>
  <div class="main">
      <section class="banner"> <baner-lunbo></baner-lunbo></section>
-     <home-list
-        @cartons="onCart"
-     ></home-list>
+     <home-list></home-list>
      <home-imges></home-imges>
      <home-lists></home-lists>
      <home-coment></home-coment>
@@ -26,10 +24,8 @@ export default {
       }
     },
     methods: {
-        onCart (e, cardata) {
+        onCart (e) {
             this.ons = e ;
-            this.carData = cardata;
-            this.$emit("oncart", this.ons,cardata);
         }
     },
     watch: {
