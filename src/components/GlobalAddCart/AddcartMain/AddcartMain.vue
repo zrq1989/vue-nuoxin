@@ -1,48 +1,45 @@
 <template>
-    <section class="top clear_fix ">
-        <a class="pop_item " href="#">2-4人食</a>
-        <a class="pop_item "  href="#">5-8人食</a>
-        <a class="pop_item "  href="#">10-12人食</a>
-        <a class="pop_item "  href="#">15-20人食</a>
+    <section class="top clear_fix ">{{ f }}
+        <a class="pop_item " href="javascript:;"
+            v-for="(item, index) in list"
+            :key="index"
+           :data-index="index"
+           @click="tabTogg"
+           :class="{'active':index == listIndex}"
+        >{{ item.num }}人食</a>
     </section>
 </template>
 
 <script>
-    import { mapState, mapGetters} from 'vuex'
-    import store from './../../../store/store'
     export default {
         name: "AddcartMain",
-        store,
         data () {
             return {
                 num: [],
                 indes: "",
                 list: [],
-                cart: []
+                cart: [],
+                listIndex: '0'
             }
         },
-        mounted() {
-            // const index = this.$store.state.index;
-            // this.cart = this.$store.state.carData;
-            // if (this.cart) {
-            //     // this.list = this.cart[index].nums;
-            //     console.log(this.$store.state.carData)
-            // }
-            console.log(this.$store.state.carData)
+        created() {
 
         },
         computed: {
-            ...mapState(['carData']),
-            ...mapGetters(['getCart']),
             f: function () {
-                console.log(this.$store.state.carData)
-            }
-        },
-        watch: {
-            "this.$store": function () {
-                this.f
+               if (this.$store.state.carData.length != 0 ) {
+                    this.cart = this.$store.state.carData;
+                   const index = this.$store.state.index;
+                   this.list = this.cart[index].nums;
+               }
             },
-            deep: true
+
+        },
+        methods: {
+            tabTogg (e) {
+                this.listIndex = e.target.getAttribute("data-index")
+                this.$store.dispatch('listn', this.listIndex)
+            }
         }
     }
 </script>
@@ -67,5 +64,8 @@
         clear: both;
         height: 0;
         zoom: 1;
+    }
+    a.active {
+        background: #ffffff;
     }
 </style>

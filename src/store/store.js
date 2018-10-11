@@ -2,7 +2,8 @@ export let state = {
     carData: [],
     index: "",
     nn:"",
-    ofs: ""
+    ofs: "",
+    listindex: '0'
 }
 
 export let mutations = {
@@ -17,6 +18,9 @@ export let mutations = {
     },
     ADD_OFS (state, index) {
         state.nn = index
+    },
+    ADD_LISTN (state, list) {
+        state.listindex = list
     }
 }
 
@@ -35,5 +39,8 @@ export let actions = {
     },
     addOfs (context,index) {
         context.commit("ADD_OFS", index)
+    },
+    listn (context, listindex) {
+        context.commit("ADD_LISTN",listindex)
     }
 }

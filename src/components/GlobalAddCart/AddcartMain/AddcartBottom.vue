@@ -1,14 +1,14 @@
 <template>
-    <section class="bottom clear_fix">
-        <p class="taste no_wrap">口味：雪域口味</p>
+    <section class="bottom clear_fix">{{ f }}
+        <p class="taste no_wrap">口味：{{ flav }}</p>
         <p class="size has_icon no_wrap">
             约
             <i></i>
-            13x13x4cm
+            {{ spec }}
         </p>
         <p class="tableware has_icon no_wrap">
             <i></i>
-            含5套餐具
+            含{{ tabw }}套餐具
         </p>
         <p class="sweet">
             甜度：
@@ -17,14 +17,43 @@
         <p class="weight has_icon">
             约
             <i></i>
-            450g
+            {{ qua }}
         </p>
     </section>
 </template>
 
 <script>
     export default {
-        name: "AddcartBottom"
+        name: "AddcartBottom",
+        props: ['datan'],
+        data () {
+            return {
+                cardata: [],
+                spec: '',
+                tabw: '',
+                qua: '',
+                flav: '',
+                dataN: this.datan,
+                value: [],
+
+            }
+        },
+        computed: {
+          f: function () {
+              if (this.$store.state.carData.length != 0) {
+                const index = this.$store.state.index;
+                this.cardata = this.$store.state.carData;
+                this.spec = this.cardata[index].spec;
+                const dataindex = this.$store.state.listindex
+                this.qua = this.cardata[dataindex].qua;
+                this.flav = this.cardata[index].flav;
+                this.value = this.cardata[dataindex].value
+                  this.tabw = this.value[dataindex].tabw;
+                  this.spec = this.cardata[dataindex].spec;
+              }
+          }
+        },
+
     }
 </script>
 

@@ -7,16 +7,21 @@
         </a>
         <span class="s"></span>
         <div class="global_top_cart" :style="{ display: togg }">
-            <div class="no_content">
-                 购物车中还没有商品，赶紧选购吧
-            </div>
+            <!--<div class="no_content">-->
+                 <!--购物车中还没有商品，赶紧选购吧-->
+            <!--</div>-->
+            <glpbal-list></glpbal-list>
+            <global-cart-bottom></global-cart-bottom>
         </div>
     </div>
 </template>
 
 <script>
+    import GlpbalList from "./GlobalList/GlpbalList";
+    import GlobalCartBottom from "./GlobalList/GlobalCartBottom";
     export default {
         name: "GlobalVavCart",
+        components: {GlobalCartBottom, GlpbalList},
         data () {
             return {
                 togg: "none"

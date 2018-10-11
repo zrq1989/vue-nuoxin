@@ -8,8 +8,9 @@
         </div>
         <div class="f_right price_wrap text_right">
             <p class="new_price">
+                {{ f }}
                 <small>¥ </small>
-                198
+                {{ pic }}
             </p>
         </div>
     </section>
@@ -17,7 +18,25 @@
 
 <script>
     export default {
-        name: "AddcartDatail"
+        name: "AddcartDatail",
+        data () {
+            return {
+                pic: '',
+                cardata: [],
+                value: []
+            }
+        },
+        computed: {
+            f: function () {
+                if (this.$store.state.carData.length != 0) {
+                    const index = this.$store.state.index;
+                    const listn = this.$store.state.listindex;
+                    this.cardata = this.$store.state.carData;
+                    this.value = this.cardata[index].value;
+                    this.pic = this.value[listn].pic
+                }
+            }
+        }
     }
 </script>
 

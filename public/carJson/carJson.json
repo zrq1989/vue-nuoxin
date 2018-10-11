@@ -9,7 +9,24 @@
     "spec": "13x13x4cm",
     "tabw": "5",
     "qua": "450g",
-    "id": "0"
+    "id": "0",
+    "value": [
+      {
+        "spec": "13x13x4cm","qua": "450g","pic": "198","tabw": "5"
+      },
+      {
+      "spec": "17x17x4cm","qua": "820g","pic": "298","tabw": "10"
+    },
+      {
+        "spec": "22x22x4cm","qua": "1300g","pic": "458","tabw": "15"
+      },
+      {
+        "spec": "31x31x4cm","qua": "2600g","pic": "756","tabw": "20"
+      },
+      {
+        "spec": "17x17x4cm","qua": "820g","pic": "298","tabw": "10"
+      }
+    ]
   },
   {
     "nums": [
@@ -21,7 +38,24 @@
     "spec": "13x20x8cm",
     "tabw": "5",
     "qua": "435g",
-    "id": "1"
+    "id": "1",
+    "value": [
+      {
+        "spec": "13x13x4cm","qua": "450g","pic": "198","tabw": "5"
+      },
+      {
+        "spec": "17x17x4cm","qua": "820g","pic": "298","tabw": "10"
+      },
+      {
+        "spec": "22x22x4cm","qua": "1300g","pic": "458","tabw": "15"
+      },
+      {
+        "spec": "31x31x4cm","qua": "2600g","pic": "756","tabw": "20"
+      },
+      {
+        "spec": "17x17x4cm","qua": "820g","pic": "298","tabw": "10"
+      }
+    ]
   },
   {
     "nums": [
@@ -33,7 +67,24 @@
     "spec": "20x16x4cm",
     "tabw": "5",
     "qua": "700g",
-    "id": "2"
+    "id": "2",
+    "value": [
+      {
+        "spec": "13x13x4cm","qua": "450g","pic": "198","tabw": "5"
+      },
+      {
+        "spec": "17x17x4cm","qua": "820g","pic": "298","tabw": "10"
+      },
+      {
+        "spec": "22x22x4cm","qua": "1300g","pic": "458","tabw": "15"
+      },
+      {
+        "spec": "31x31x4cm","qua": "2600g","pic": "756","tabw": "20"
+      },
+      {
+        "spec": "17x17x4cm","qua": "820g","pic": "298","tabw": "10"
+      }
+    ]
   },
   {
     "nums": [
@@ -45,7 +96,82 @@
     "spec": "13x13x4cm",
     "tabw": "5",
     "qua": "390g",
-    "id": "3"
+    "id": "3",
+    "value": [
+      {
+        "spec": "13x13x4cm","qua": "450g","pic": "198","tabw": "5"
+      },
+      {
+        "spec": "17x17x4cm","qua": "820g","pic": "298","tabw": "10"
+      },
+      {
+        "spec": "22x22x4cm","qua": "1300g","pic": "458","tabw": "15"
+      },
+      {
+        "spec": "31x31x4cm","qua": "2600g","pic": "756","tabw": "20"
+      },
+      {
+        "spec": "17x17x4cm","qua": "820g","pic": "298","tabw": "10"
+      }
+    ]
+  },
+  {
+    "nums": [
+      {"num": "2-4"},{"num": "5-8"},{"num": "10-12"},{"num": "15-20"}
+    ],
+    "tytle": "小甜点蛋糕",
+    "pic": "198",
+    "flav": "奶油口味",
+    "spec": "13x12x4cm",
+    "tabw": "5",
+    "qua": "390g",
+    "id": "4",
+    "value": [
+      {
+        "spec": "13x13x4cm","qua": "450g","pic": "198","tabw": "5"
+      },
+      {
+        "spec": "17x17x4cm","qua": "820g","pic": "298","tabw": "10"
+      },
+      {
+        "spec": "22x22x4cm","qua": "1300g","pic": "458","tabw": "15"
+      },
+      {
+        "spec": "31x31x4cm","qua": "2600g","pic": "756","tabw": "20"
+      },
+      {
+        "spec": "17x17x4cm","qua": "820g","pic": "298","tabw": "10"
+      }
+    ]
+  },
+  {
+    "nums": [
+      {"num": "2-4"},{"num": "5-8"},{"num": "10-12"},{"num": "15-20"}
+    ],
+    "tytle": "栗子千层蛋糕蛋糕",
+    "pic": "218",
+    "flav": "栗子口味",
+    "spec": "13x15x4cm",
+    "tabw": "5",
+    "qua": "350g",
+    "id": "5",
+    "value": [
+      {
+        "spec": "13x13x4cm","qua": "450g","pic": "198","tabw": "5"
+      },
+      {
+        "spec": "17x17x4cm","qua": "820g","pic": "298","tabw": "10"
+      },
+      {
+        "spec": "22x22x4cm","qua": "1300g","pic": "458","tabw": "15"
+      },
+      {
+        "spec": "31x31x4cm","qua": "2600g","pic": "756","tabw": "20"
+      },
+      {
+        "spec": "17x17x4cm","qua": "820g","pic": "298","tabw": "10"
+      }
+    ]
   },
   {
     "nums": [
@@ -57,7 +183,24 @@
     "spec": "13x13x4cm",
     "tabw": "5",
     "qua": "400g",
-    "id": "6"
+    "id": "6",
+    "value": [
+      {
+        "spec": "13x13x4cm","qua": "450g","pic": "198","tabw": "5"
+      },
+      {
+        "spec": "17x17x4cm","qua": "820g","pic": "298","tabw": "10"
+      },
+      {
+        "spec": "22x22x4cm","qua": "1300g","pic": "458","tabw": "15"
+      },
+      {
+        "spec": "31x31x4cm","qua": "2600g","pic": "756","tabw": "20"
+      },
+      {
+        "spec": "17x17x4cm","qua": "820g","pic": "298","tabw": "10"
+      }
+    ]
   },
   {
     "nums": [
@@ -69,6 +212,23 @@
     "spec": "13x13x4cm",
     "tabw": "5",
     "qua": "430g",
-    "id": "7"
+    "id": "7",
+    "value": [
+      {
+        "spec": "13x13x4cm","qua": "450g","pic": "198","tabw": "5"
+      },
+      {
+        "spec": "17x17x4cm","qua": "820g","pic": "298","tabw": "10"
+      },
+      {
+        "spec": "22x22x4cm","qua": "1300g","pic": "458","tabw": "15"
+      },
+      {
+        "spec": "31x31x4cm","qua": "2600g","pic": "756","tabw": "20"
+      },
+      {
+        "spec": "17x17x4cm","qua": "820g","pic": "298","tabw": "10"
+      }
+    ]
   }
 ]

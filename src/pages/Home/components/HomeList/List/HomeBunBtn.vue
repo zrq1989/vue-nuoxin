@@ -27,7 +27,10 @@
             oncart () {
 
                 this.$http.get("./carJson/carJson.json").then(res=>{
-                    return this.$store.dispatch("addData",res.data)
+                    return(
+                        this.$store.dispatch("addData",res.data)
+                    )
+
                 }).catch(res=>console.log(res))
                 let obj = {}
                 obj.index = this.index
